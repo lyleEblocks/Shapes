@@ -64,7 +64,18 @@ namespace Shape.Tests
             // Assert
             Assert.Equal(result, 110);
         }
+         [Fact]
+        public void Calculate_Area_Of_Rectangle_Unsuccessfully()
+        {
+            // Arrange
+            Rectangle rect = new Rectangle(10,11);
 
+            // Act
+            double result = rect.CalculateArea();
+
+            // Assert
+            Assert.NotEqual(100, 110);
+        }
         [Fact]
         public void Calculate_Area_Of_Rectangle_Exception()
         {

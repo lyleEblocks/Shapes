@@ -80,7 +80,7 @@ namespace Shape.Tests
         public void Calculate_Area_Of_Rectangle_Exception()
         {
             // Arrange
-
+            // var int = 0;
             // Act
             
             // Assert

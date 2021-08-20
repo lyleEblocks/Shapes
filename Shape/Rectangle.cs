@@ -22,7 +22,6 @@ namespace Shape
     { 
         private int length;
         private int width;
-        private int area;
 
         public Rectangle(int length, int width)
         {

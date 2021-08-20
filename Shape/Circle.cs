@@ -31,7 +31,7 @@ namespace Shape.Tests
         ///     Instantiates an instance of <see cref="Circle">. 
         /// </summary>
         /// <param name="radius">
-        ///     A <see cref="double"> representing the radius of a circle
+        ///     A <see cref="double"> representing the radius of a circle.
         /// </param>
         public Circle(double radius)
         {
@@ -98,7 +98,7 @@ namespace Shape.Tests
         ///     Overrides the <see cref = "GetHashCode"> method.
         /// </summary>
         /// <returns>
-        ///     The 
+        ///     A GetHashCode value.
         /// </returns>
         public override int GetHashCode()
         {

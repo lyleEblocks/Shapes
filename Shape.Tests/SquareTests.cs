@@ -18,8 +18,26 @@ using Xunit;
 
 namespace Shape.Tests
 {
+    /// <summary>
+    ///     Provides Testing for the <see cref="Square"> Class.
+    /// </summary>
     public class SquareTests
     {
-        
+        /// <summary>
+        ///     Tests that two squares are equal successfully.
+        /// </summary>
+        [Fact]
+        public void Should_Ensure_The_Two_Squares_Are_Equal()
+        {
+            //Arrange
+            Square square1 = new Square(12);
+            Square square2 = new Square(12);
+
+            //Act
+            bool squares_are_equal = square1.Equals(square2);
+
+            //Arrange
+            Assert.True(squares_are_equal);
+        }
     }
 }

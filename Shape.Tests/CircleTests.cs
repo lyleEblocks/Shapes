@@ -19,7 +19,7 @@ using Xunit;
 namespace Shape.Tests
 {
     /// <summary>
-    ///     Provides Testing for the Circle Class.
+    ///     Provides Testing for the <see cref ="Circle"> Class.
     /// </summary>
     public class CircleTests
     {

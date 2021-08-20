@@ -1,9 +1,11 @@
 using System;
 using Xunit;
+using RectangleShape;
 
-namespace Shape.Tests
+namespace RectangleTests
 {
-    public class RectangleTests
+  
+    public class RectangleTest
     {
         [Fact]
         public void Should_Ensure_The_Two_Rectangles_Are_Equal()
@@ -11,9 +13,7 @@ namespace Shape.Tests
             //  Arrange
             Rectangle rectangleA = new Rectangle(10, 20);
           
-
             Rectangle rectangleB = new Rectangle(10,20);
-        
 
             //  Act
             bool result = rectangleA.Equals(rectangleB);
@@ -22,29 +22,28 @@ namespace Shape.Tests
             Assert.True(result);
         }
 
-          [Fact]
+        [Fact]
         public void Should_Ensure_The_Two_Rectangles_Are_NotEqual()
         {
             //  Arrange
             Rectangle rectangleA = new Rectangle(11, 20);
-          
 
             Rectangle rectangleB = new Rectangle(10,20);
-        
 
             //  Act
             bool result = rectangleA.Equals(rectangleB);
 
             //  Assert
             Assert.False(result);
-          
         }
 
         [Fact]
         public void Should_Ensure_Rectangle_Has_Valid_Parameters()
         {
             //  Arrange
+
             //  Act
+            
             //  Assert
             Assert.Throws<ArgumentOutOfRangeException>(() =>
             { 
@@ -62,25 +61,14 @@ namespace Shape.Tests
             double result = rect.CalculateArea();
 
             // Assert
-            Assert.Equal(result, 110);
+            Assert.True(result == 110);
         }
-         [Fact]
-        public void Calculate_Area_Of_Rectangle_Unsuccessfully()
-        {
-            // Arrange
-            Rectangle rect = new Rectangle(10,11);
 
-            // Act
-            double result = rect.CalculateArea();
-
-            // Assert
-            Assert.NotEqual(100, 110);
-        }
         [Fact]
         public void Calculate_Area_Of_Rectangle_Exception()
         {
             // Arrange
-            // var int = 0;
+
             // Act
             
             // Assert

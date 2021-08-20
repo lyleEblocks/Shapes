@@ -1,12 +1,13 @@
 using System;
 
-namespace Shape
+
+namespace RectangleShape
 {
+
     public class Rectangle
     { 
         private int length;
         private int width;
-        private int area;
 
         public Rectangle(int length, int width)
         {

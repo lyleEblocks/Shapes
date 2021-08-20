@@ -1,54 +1,93 @@
+/*
+ * [2019] - [2021] Eblocks Software (Pty) Ltd, All Rights Reserved.
+ * NOTICE: All information contained herein is, and remains the property of Eblocks
+ * Software (Pty) Ltd.
+ * and its suppliers (if any). The intellectual and technical concepts contained herein
+ * are proprietary
+ * to Eblocks Software (Pty) Ltd. and its suppliers (if any) and may be covered by South 
+ * African, U.S.
+ * and Foreign patents, patents in process, and are protected by trade secret and / or 
+ * copyright law.
+ * Dissemination of this information or reproduction of this material is forbidden unless
+ * prior written
+ * permission is obtained from Eblocks Software (Pty) Ltd.
+*/
+
 using System;
 
-namespace Shape
-{
+namespace ShapeCircle
+{   
+    /// <summary>
+    ///     This class declares the properties of a circle and underlying methods
+    ///     <see cref = "double" radius/>
+    ///     <see cref = "const double" PIE/>
+    /// </summary>
     public class Circle
     {
-        private int radius;
+        private double radius;
+        private const double PIE = 3.14;
 
-        public Circle(int r)
+
+        /// <summary>
+        ///     This constructor defines the properties of circle using the radius.
+        /// </summary>
+        /// <param name="radius"></param>
+        public Circle(double radius)
         {
-            
-            if (r <= 0) 
+            if (radius <= 0) 
             {
                 throw new ArgumentOutOfRangeException($"{nameof(radius)} cannot be 0 or negative");
             }
-
-            radius = r;
+            this.radius = radius;
         }
 
+        /// <summary>
+        ///     The following method overrides the default method of Equals to allow of robjects to equal to one and other. 
+        /// </summary>
+        /// <param name="obj">is a <see cref = "obj"/> object signature</param>
+        /// <returns>
+        ///     A <see cref ="bool"/> returns a boolean value of true if the objects are equal
+        ///     A <see cref ="bool"/> returns a boolean value of false if the objects are not equal
+        /// </returns>
         public override bool Equals(object obj)
         {
-            Circle A = obj as Circle;
-            if(A.radius == this.radius)
-            {
+            Circle B =  obj as Circle;
+            
+            if(B != null && this.radius == B.radius)
                 return true;
-            }
             else
-            {
                 return false;
-            }
-           
         }
-
-        public double CalculateArea()
-        {
-            return Math.PI * radius * radius;
-        }
-
-        public double CalculateCircumference()
-        {
-            return Math.PI * radius * 2;
-        }
-
-        public int CalculateDiameter()
-        {
-            return radius * 2;
-        }
-    
+        
         public override int GetHashCode()
         {
-            return base.GetHashCode();
+                return base.GetHashCode();
+        }
+        /// <summary>
+        ///     The following method calcalculates the are of a circle
+        /// </summary>
+        /// <returns></returns>
+        public double CalculateTheAreaOfACircle()
+        {
+            
+            if (radius <= 0) 
+            {
+                throw new ArgumentOutOfRangeException($"{nameof(radius)} cannot be 0 or negative");
+            }
+            double area = radius*radius*PIE;
+
+            return area;
+        }
+        public double CalculateThePerimeterOfACircle()
+        {
+             if (radius <= 0) 
+            {
+                throw new ArgumentOutOfRangeException($"{nameof(radius)} cannot be 0 or negative");
+            }
+           
+            double perimeter = radius*2*PIE;
+            
+            return perimeter;
         }
 
     }

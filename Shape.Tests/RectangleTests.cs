@@ -62,7 +62,7 @@ namespace Shape.Tests
             double result = rect.CalculateArea();
 
             // Assert
-            Assert.Equal(result, 110);
+            Assert.Equal(110, result);
         }
          [Fact]
         public void Calculate_Area_Of_Rectangle_Unsuccessfully()

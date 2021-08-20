@@ -93,5 +93,16 @@ namespace Shape.Tests
         {
             return 2*this.radius;
         }
+
+        /// <summary>
+        ///     Overrides the <see cref = "GetHashCode"> method.
+        /// </summary>
+        /// <returns>
+        ///     The 
+        /// </returns>
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
     }
 }

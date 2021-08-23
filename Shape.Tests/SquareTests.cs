@@ -39,5 +39,84 @@ namespace Shape.Tests
             //Arrange
             Assert.True(squares_are_equal);
         }
+
+        /// <summary>
+        ///     Tests that two squares are not equal successfully.
+        /// </summary>
+        [Fact]
+        public void Should_Ensure_The_Two_Squares_Are_NotEqual()
+        {
+            //  Arrange
+            Square square1 = new Square(15);
+            Square square2 = new Square(11);
+
+            //  Act
+            bool result = square1.Equals(square2);
+
+            //  Assert
+            Assert.False(result);
+        }
+
+        /// <summary>
+        ///     Test that an exception is thrown when an invalid parameters is passed.
+        /// </summary>
+        [Fact]
+        public void Should_Ensure_Square_Has_Valid_Parameters()
+        {
+            //  Arrange
+            //  Act
+            //  Assert
+            Assert.Throws<ArgumentOutOfRangeException>(() =>
+            { 
+                Square square1 = new Square(-11);
+            });          
+        }
+
+        /// <summary>
+        ///     Tests that the area of the square is calculated successfully.
+        /// </summary>
+        [Fact]
+        public void Calculate_Area_Of_Square_Successfully()
+        {
+            // Arrange
+            Square square = new Square(12);
+
+            // Act
+            double result = square.CalculateArea();
+
+            // Assert
+            Assert.Equal(144, result);
+        }
+
+        /// <summary>
+        ///     Throws an exception when the square has invalid parameters.
+        /// </summary>
+        [Fact]
+        public void Calculate_Area_Of_Square_Exception()
+        {
+            // Arrange
+            // Act
+            // Assert
+            Assert.Throws<ArgumentOutOfRangeException>(() =>
+            {
+               Square square = new Square(-11); 
+            });
+        }
+
+        /// <summary>
+        ///     Tests that the perimeter of the square is calculated successfully.
+        /// </summary>
+        [Fact]
+        public void Calculate_Perimeter_Of_Square()
+        {
+            //Arrange
+            Square square = new Square(12);
+            //Act
+            double result = square.CalculatePerimeter();
+            //Assert
+            Assert.Equal(48, result);
+        }
+
+        
     }
 }

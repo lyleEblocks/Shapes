@@ -17,13 +17,31 @@ using System;
 
 namespace Shape
 {
-    
+    /// <summary>
+    ///     Provides rectangle calculations.
+    /// </summary>
     public class Rectangle
     { 
-        private int length;
-        private int width;
+        /// <summary>
+        ///     Declares the length of the rectangle.
+        /// </summary>
+        private double length;
 
-        public Rectangle(int length, int width)
+        /// <summary>
+        ///      Declares the width of the rectangle.
+        /// </summary>
+        private double width;
+
+        /// <summary>
+        ///     Instantiates a rectangle object.
+        /// </summary>
+        /// <param name="length">
+        ///     A <see cref="double"> representing the length of the rectangle.
+        /// </param>
+        /// <param name="width">
+        ///     A <see cref="double"> representing the width of the rectangle.
+        /// </param>
+        public Rectangle(double length, double width)
         {
             if (length <= 0 || width <= 0) 
             {
@@ -34,6 +52,23 @@ namespace Shape
             this.width = width;
         }
 
+        /// <summary>
+        ///     Gets a <see cref="double"> representing the length of the rectangle.
+        /// </summary>
+        public double Length
+        {
+            get { return length; }
+        }
+
+        /// <summary>
+        ///     Validates whether two rectangles are equal.
+        /// </summary>
+        /// <param name="obj">
+        ///     A <see cref="object"> representing the second rectangle to equate to the first.
+        /// </param>
+        /// <returns>
+        ///     A <see cref="bool"> representing whether the rectangles are equal or not. 
+        /// </returns>
         public override bool Equals(object obj)
         {
             Rectangle B =  obj as Rectangle;
@@ -44,6 +79,12 @@ namespace Shape
                 return false;
         }
 
+        /// <summary>
+        ///     Calculates the area of the rectangle.
+        /// </summary>
+        /// <returns>
+        ///     A <see cref="double"> representing the area of the rectangle. 
+        /// </returns>
         public double CalculateArea()
         {
             if(width <= 0 || length <= 0)
@@ -53,9 +94,15 @@ namespace Shape
             return length * width;
         }
 
-       public override int GetHashCode()
-       {
+        /// <summary>
+        ///     Overrides the <see cref = "GetHashCode"> method.
+        /// </summary>
+        /// <returns>
+        ///     A GetHashCode value.
+        /// </returns>
+        public override int GetHashCode()
+        {
             return base.GetHashCode();
-       }
+        }
     }
 }

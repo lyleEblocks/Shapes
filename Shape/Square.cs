@@ -20,47 +20,27 @@ namespace Shape
     /// <summary>
     ///     Provides multiple square calculation functions.
     /// </summary>
-    public class Square
+    public class Square : Rectangle
     {
         /// <summary>
-        ///     Declares the length of the square.
-        /// </summary>
-        private double length;
-
-        /// <summary>
-        ///     Instantiates an instance of <see cref="Square">. 
+        ///     Instantiates an instance of a square.
         /// </summary>
         /// <param name="length">
-        ///     A <see cref="double"> representing the length of a square.
+        ///     A <see cref="double"> representing the length of the the square.
         /// </param>
-        public Square(double length)
+        public Square(double length) : base(length, length)
         {
-            this.length = length;
         }
 
         /// <summary>
-        ///     Validates whether two squares are equal.
-        /// </summary>
-        /// <param name="obj">
-        ///     An <see cref="object"> representing the second square to compare to the current <see cref="Square">.
-        /// </param>
-        /// <returns>
-        ///     A <see cref="bool"> representing whether the two squares are equal or not.
-        /// </returns>
-        public override bool Equals(object obj)
-        {
-            return true;
-        }
-
-        /// <summary>
-        ///     Overrides the <see cref = "GetHashCode"> method.
+        ///     Calculates the perimeter of a square.
         /// </summary>
         /// <returns>
-        ///     A GetHashCode value.
+        ///     A <see cref="double"> representing the perimeter of the square.
         /// </returns>
-        public override int GetHashCode()
+        public double CalculatePerimeter()
         {
-            return base.GetHashCode();
+            return Length*4;
         }
     }
 }

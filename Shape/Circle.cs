@@ -53,6 +53,7 @@ namespace Shape
         {
             Circle circleB = obj as Circle;
 
+            // return (circleB != null && this.radius == circleB.radius)
             if (circleB != null && this.radius == circleB.radius)
             {
                 return true;
@@ -113,7 +114,7 @@ namespace Shape
             double diameter = radius * 2;
             if (double.IsInfinity(diameter))
             {
-                throw new OverflowException("radius is too large to calculate diameter.");
+                throw new OverflowException("Radius is too large to calculate diameter.");
             }
             return diameter;
         }

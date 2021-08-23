@@ -83,7 +83,7 @@ namespace Shape
             {
                 throw new OverflowException("Length or width is too large to calculate area.");
             }
-            return length * width;
+            return area;
         }
 
         /// <inheritdoc />

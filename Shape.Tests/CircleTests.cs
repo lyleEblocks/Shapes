@@ -30,7 +30,6 @@ namespace Shape.Tests
         public void Should_Instantiate_Circle_Successfully()
         {
             //Arrange
-            
             //Act
             Circle circle = new Circle(8);
 
@@ -45,8 +44,8 @@ namespace Shape.Tests
         public void Should_Ensure_The_Two_Are_Equal()
         {
             //Arrange
-            Circle circleA = new Circle (9);
-            Circle circleB = new Circle (9);
+            Circle circleA = new Circle(9);
+            Circle circleB = new Circle(9);
 
             //Act
             bool result = circleA.Equals(circleB);

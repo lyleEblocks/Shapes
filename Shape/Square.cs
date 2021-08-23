@@ -27,9 +27,6 @@ namespace Shape
         /// <param name="length">
         ///     A <see cref="double" /> representing the length of the sides of the square.
         /// </param>
-        public Square(double length) : base (length, length)
-        {
-
-        }
+        public Square(double length) : base (length, length) { }
     }
 }

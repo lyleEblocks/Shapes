@@ -42,7 +42,7 @@ namespace ShapeCircle
         }
 
         /// <summary>
-        ///     The following method overrides the default method of Equals to allow of robjects to equal to one and other. 
+        ///     The following method overrides the default method of Equals to allow  for objects to equal to one and other. 
         /// </summary>
         /// <param name="obj">is a <see cref = "obj"/> object signature</param>
         /// <returns>
@@ -64,9 +64,12 @@ namespace ShapeCircle
                 return base.GetHashCode();
         }
         /// <summary>
-        ///     The following method calcalculates the are of a circle
+        ///     The following method calcalculates the area of a circle <see cref = "double"/>
         /// </summary>
-        /// <returns></returns>
+        /// <returns> 
+        ///     A <see cref ="double"/> Throws an exception if radius is negative
+        ///     A <see cref ="double"/> returns a doublen value of the calculated area
+        /// </returns>
         public double CalculateTheAreaOfACircle()
         {
             
@@ -78,6 +81,13 @@ namespace ShapeCircle
 
             return area;
         }
+        /// <summary>
+        ///     The following method calcalculates the perimeter of a circle <see cref = "double"/>
+        /// </summary>
+        /// <returns> 
+        ///     A <see cref ="double"/> Throws an exception if radius is negative
+        ///     A <see cref ="double"/> returns a doublen value of the calculated area
+        /// </returns>
         public double CalculateThePerimeterOfACircle()
         {
              if (radius <= 0) 

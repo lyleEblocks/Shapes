@@ -137,8 +137,8 @@ namespace Shape
         /// <summary>
         ///      <see cref="Calculate_Diameter_Of_Circle"/> calculates the diameter of a circle.
         /// </summary>
-        /// <param name="PI">
-        ///      Cirlce PI which is 3.141.
+        /// <param name="two">
+        ///      The number two in the diameter formula of the circle.
         /// </param>
         /// <param name="radius">
         ///      Circle radius which is any positive value.

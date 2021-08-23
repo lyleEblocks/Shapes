@@ -80,4 +80,30 @@ namespace Shape
         }
         
     }
+    public class Square{
+        private double area;
+         private double perimeter;
+         private double diagonal;
+
+        public Square(double area)
+        {
+            this.area = area;
+        }
+        public double Calculate_Area_of_A_Square(double area)
+        {
+            double result = Math.Pow(area, 2);
+            return result;
+        }
+        public double Calculate_Perimeter_of_A_Square(double perimeter)
+        {
+            double result = 4*(perimeter);
+            return result;
+        }
+        public double Calculate_Diagonal_of_A_Square(double diagonal)
+        {
+            double result = Math.Pow(diagonal, 2)+ Math.Pow(diagonal, 2);
+            return result;
+        }
+
+    }
 }

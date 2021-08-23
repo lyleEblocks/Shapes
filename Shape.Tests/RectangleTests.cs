@@ -146,8 +146,67 @@ namespace Shape.Tests
             Assert.Throws<ArgumentOutOfRangeException>(()=> 
             { Circle diameter = new Circle(2, -5);});
         }
+        [Fact]
+        public void Calculate_Area_of_A_Square_Successfully()
+        {
+            // Arrange
+             Square area = new Square(4);
+            // Arrange
+            double result = area.Calculate_Area_of_A_Square(4);
+            // Assert
+            Assert.Equal(16, result);
+        }
+        [Fact]
+        public void Calculate_Area_of_A_Square_Usuccessfully()
+        {
+            // Arrange
+             Square area1 = new Square(0);
+            // Arrange
+            double result = area1.Calculate_Area_of_A_Square(0);
+            // Assert
+            Assert.NotEqual(16, result);
+        }
+      [Fact]
+        public void Calculate_Perimeter_of_A_Square_Successfully()
+        {
+            // Arrange
+             Square perimeter = new Square(8);
+            // Arrange
+            double result = perimeter.Calculate_Perimeter_of_A_Square(8);
+            // Assert
+            Assert.Equal(32, result);
+        }
+        [Fact]
+        public void Calculate_Perimeter_of_A_Square_Usuccessfully()
+        {
+            // Arrange
+             Square perimeter = new Square(0);
+            // Arrange
+            double result = perimeter.Calculate_Perimeter_of_A_Square(0);
+            // Assert
+            Assert.NotEqual(32, result);
+        }
+        [Fact]
+        public void Calculate_Diagonal_of_A_Square_Successfully()
+        {
+            // Arrange
+             Square diagonal = new Square(6);
+            // Arrange
+            double result = diagonal.Calculate_Diagonal_of_A_Square(6);
+            // Assert
+            Assert.Equal(72, result);
+        }
+        [Fact]
+        public void Calculate_Diagonal_of_A_Square_Usuccessfully()
+        {
+            // Arrange
+             Square diagonal = new Square(0);
+            // Arrange
+            double result = diagonal.Calculate_Diagonal_of_A_Square(0);
+            // Assert
+            Assert.NotEqual(72, result);
+        }
         
-        
-
+       
     }
 }

@@ -1,33 +1,54 @@
+/*
+ * [2019] - [2021] Eblocks Software (Pty) Ltd, All Rights Reserved.
+ * NOTICE: All information contained herein is, and remains the property of Eblocks
+ * Software (Pty) Ltd.
+ * and its suppliers (if any). The intellectual and technical concepts contained herein
+ * are proprietary
+ * to Eblocks Software (Pty) Ltd. and its suppliers (if any) and may be covered by South 
+ * African, U.S.
+ * and Foreign patents, patents in process, and are protected by trade secret and / or 
+ * copyright law.
+ * Dissemination of this information or reproduction of this material is forbidden unless
+ * prior written
+ * permission is obtained from Eblocks Software (Pty) Ltd.
+*/
+
 using System;
 using Xunit;
 
 namespace Shape.Tests
-{
+{   
+    /// <summary>
+    ///     Provides <see cref="RectangleTests"/> test for Rectangle.cs.
+    /// </summary>
     public class RectangleTests
-    {
+    {   
+        /// <summary>
+        ///     Test case ,testing if two rectangels are equal.
+        /// </summary>
         [Fact]
         public void Should_Ensure_The_Two_Rectangles_Are_Equal()
         {
             //  Arrange
             Rectangle rectangleA = new Rectangle(10, 20);
           
-
             Rectangle rectangleB = new Rectangle(10,20);
-        
-
+    
             //  Act
             bool result = rectangleA.Equals(rectangleB);
 
             //  Assert
             Assert.True(result);
         }
-
-          [Fact]
+         /// <summary>
+        ///     Test case ,testing if two rectangels are not equal.
+        /// </summary>  
+        [Fact]
         public void Should_Ensure_The_Two_Rectangles_Are_NotEqual()
         {
             //  Arrange
             Rectangle rectangleA = new Rectangle(11, 20);
-          
+        
 
             Rectangle rectangleB = new Rectangle(10,20);
         
@@ -37,9 +58,11 @@ namespace Shape.Tests
 
             //  Assert
             Assert.False(result);
-          
+        
         }
-
+        /// <summary>
+        ///     Test case ,testing to see if expection is thrown upon negative number entry.
+        /// </summary>
         [Fact]
         public void Should_Ensure_Rectangle_Has_Valid_Parameters()
         {
@@ -51,7 +74,9 @@ namespace Shape.Tests
                 Rectangle rectangleA = new Rectangle(-11, 20);
             });          
         }
-
+        /// <summary>
+        ///     Test case ,testing if area of rectangle is calculated Successfully.
+        /// </summary>
         [Fact]
         public void Calculate_Area_Of_Rectangle_Successfully()
         {
@@ -64,7 +89,10 @@ namespace Shape.Tests
             // Assert
             Assert.Equal(110, result);
         }
-         [Fact]
+        /// <summary>
+        ///     Test case ,testing if area of rectangle is calculated incorrectly.
+        /// </summary>
+        [Fact]
         public void Calculate_Area_Of_Rectangle_Unsuccessfully()
         {
             // Arrange
@@ -76,6 +104,9 @@ namespace Shape.Tests
             // Assert
             Assert.NotEqual(100, 110);
         }
+        /// <summary>
+        ///      Test case, testing to see if expection is throw upon negative number entry.
+        /// </summary>
         [Fact]
         public void Calculate_Area_Of_Rectangle_Exception()
         {
@@ -88,7 +119,10 @@ namespace Shape.Tests
             });
             
         }
-          [Fact]
+        /// <summary>
+        ///      Test case, testing to see if calculation of circumfrance is correct and successful.
+        /// </summary>
+        [Fact]
         public void Calculate_Circumfrance_of_A_Circle_Successfully()
         {
             // Arrange
@@ -99,7 +133,10 @@ namespace Shape.Tests
            Assert.Equal(31.41592653589793, result);
             
         }
-         [Fact]
+        /// <summary>
+        ///  Test case, testing to see if calculation of circumfrance is incorrect .
+        /// </summary>
+        [Fact]
         public void Calculate_Circumfrance_of_A_Circle_Unsuccessfully()
         {
             // Arrange
@@ -108,6 +145,9 @@ namespace Shape.Tests
             Assert.Throws<ArgumentOutOfRangeException>(()=> 
             { Circle circumf = new Circle(3.141, -5);});
         }
+        /// <summary>
+        ///      Test case, testing to see if calculation of area is correct and successful.
+        /// </summary>
         [Fact]
         public void Calculate_Area_of_A_Circle_Successfully()
         {
@@ -118,7 +158,10 @@ namespace Shape.Tests
             // Assert
             Assert.Equal(78.53981633974483, result);    
         }
-         [Fact]
+        /// <summary>
+        ///      Test case, testing to see if calculation of area is incorrect.
+        /// </summary>
+        [Fact]
         public void Calculate_Area_of_A_Circle_Unsuccessfully()
         {
             // Arrange
@@ -127,7 +170,10 @@ namespace Shape.Tests
             Assert.Throws<ArgumentOutOfRangeException>(()=> 
             { Circle area = new Circle(3.141, -5);});
         }
-         [Fact]
+        /// <summary>
+        ///      Test case, testing to see if calculation of diameter is correct and successful.
+        /// </summary>
+        [Fact]
         public void Calculate_Diameter_of_A_Circle_Successfully()
         {
             // Arrange
@@ -137,7 +183,10 @@ namespace Shape.Tests
             // Assert
             Assert.Equal( 10 ,result);
         }
-          [Fact]
+        /// <summary>
+        ///      Test case, testing to see if calculation of diameter is incorrect.
+        /// </summary>
+        [Fact]
         public void Calculate_Diameter_of_A_Circle_Unsuccessfully()
         {
             // Arrange
@@ -146,6 +195,9 @@ namespace Shape.Tests
             Assert.Throws<ArgumentOutOfRangeException>(()=> 
             { Circle diameter = new Circle(2, -5);});
         }
+        /// <summary>
+        ///      Test case, testing to see if calculation of area is correct and successful.
+        /// </summary>
         [Fact]
         public void Calculate_Area_of_A_Square_Successfully()
         {
@@ -156,6 +208,9 @@ namespace Shape.Tests
             // Assert
             Assert.Equal(16, result);
         }
+        /// <summary>
+        ///      Test case, testing to see if calculation of area is incorrect.
+        /// </summary>
         [Fact]
         public void Calculate_Area_of_A_Square_Usuccessfully()
         {
@@ -166,7 +221,10 @@ namespace Shape.Tests
             // Assert
             Assert.NotEqual(16, result);
         }
-      [Fact]
+        /// <summary>
+        ///      Test case, testing to see if calculation of parameter is correct and successful.
+        /// </summary>
+        [Fact]
         public void Calculate_Perimeter_of_A_Square_Successfully()
         {
             // Arrange
@@ -176,6 +234,9 @@ namespace Shape.Tests
             // Assert
             Assert.Equal(32, result);
         }
+        /// <summary>
+        ///      Test case, testing to see if calculation of parameter is incorrect .
+        /// </summary>
         [Fact]
         public void Calculate_Perimeter_of_A_Square_Usuccessfully()
         {
@@ -186,6 +247,9 @@ namespace Shape.Tests
             // Assert
             Assert.NotEqual(32, result);
         }
+        /// <summary>
+        ///     Test case, testing to see if Calculation of diagonal is correct and successful.
+        /// </summary>
         [Fact]
         public void Calculate_Diagonal_of_A_Square_Successfully()
         {
@@ -196,6 +260,9 @@ namespace Shape.Tests
             // Assert
             Assert.Equal(72, result);
         }
+        /// <summary>
+        ///     Test case, testing to see if Calculation of diagonal is incorrect.
+        /// </summary>
         [Fact]
         public void Calculate_Diagonal_of_A_Square_Usuccessfully()
         {

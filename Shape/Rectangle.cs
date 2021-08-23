@@ -23,17 +23,16 @@ namespace RectangleShape
     ///     <see cref = "double" length/>
     ///     <see cref = "const double" width/>
     /// </summary>
-
     public class Rectangle : Calculations
     { 
         private int length;
         private int width;
+
         /// <summary>
         ///     This constructor instantiates the properties of the rectangle
         /// </summary>
         /// <param name="length"></param>
         /// <param name="width"></param>
-
         public Rectangle(int length, int width)
         {
             if (length <= 0 || width <= 0) 
@@ -44,7 +43,8 @@ namespace RectangleShape
             this.length = length;
             this.width = width;
         }
-       /// <summary>
+
+        /// <summary>
         ///     The following method overrides the default method of Equals to allow  for objects to be equal to one and the other. 
         /// </summary>
         /// <param name="obj">is a <see cref = "obj"/> object signature</param>
@@ -52,7 +52,6 @@ namespace RectangleShape
         ///     A <see cref ="bool"/> returns a boolean value of true if the objects are equal
         ///     A <see cref ="bool"/> returns a boolean value of false if the objects are not equal
         /// </returns>
-
         public override bool Equals(object obj)
         {
             Rectangle B =  obj as Rectangle;
@@ -62,14 +61,13 @@ namespace RectangleShape
             else
                 return false;
         }
+
         /// <summary>
         ///     The following method calcalculates the area of a Rectangle <see cref = "double"/>
         /// </summary>
         /// <returns> 
-        ///     A <see cref ="double"/> Throws an exception if length and width are negative
         ///     A <see cref ="double"/> returns a doublen value of the calculated area
         /// </returns>
-
         public override double CalculateArea()
         {
             if(width <= 0 || length <= 0)
@@ -78,7 +76,8 @@ namespace RectangleShape
             }
             return length * width;
         }
-         /// <summary>
+         
+        /// <summary>
         ///     The following method calcalculates the perimeter of a Rectangle <see cref = "double"/>
         /// </summary>
         /// <returns> 
@@ -94,9 +93,10 @@ namespace RectangleShape
             return length*2 + width*2;
         }
 
-       public override int GetHashCode()
-       {
-            return base.GetHashCode();
-       }
+        /// <Inheritdoc> 
+        public override int GetHashCode()
+        {
+                return base.GetHashCode();
+        }
     }
 }

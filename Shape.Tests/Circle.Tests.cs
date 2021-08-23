@@ -25,7 +25,6 @@ namespace CircleTests
 
             //Assert
             Assert.True(result);
-
         }
 
         /// <summary>

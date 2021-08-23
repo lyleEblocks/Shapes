@@ -17,7 +17,7 @@ using System;
 namespace CalculationsSpace
 {
     /// <summary>
-    ///     This class provides the definition for the calculation methods <see cref = "double"/>, CalculateArea() and CalculatePerimeter() for the Square, Circle and Rectangle class
+    ///     This class provides the definition for the calculation methods <see cref = "double"/>, CalculateArea() and CalculatePerimeter() for the Square, Circle and Rectangle class.
     /// </summary>
     public abstract class Calculations
     {

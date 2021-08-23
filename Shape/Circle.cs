@@ -21,7 +21,6 @@ namespace ShapeCircle
     /// <summary>
     ///     This class declares the properties of a circle and underlying methods
     ///     <see cref = "double" radius/>
-    ///     <see cref = "const double" PIE/>
     /// </summary>
     public class Circle : Calculations
     {
@@ -59,10 +58,12 @@ namespace ShapeCircle
                 return false;
         }
         
+         /// <Inheritdoc>
         public override int GetHashCode()
         {
                 return base.GetHashCode();
         }
+
         /// <summary>
         ///     The following method calcalculates the area of a circle <see cref = "double"/>
         /// </summary>
@@ -81,12 +82,12 @@ namespace ShapeCircle
 
             return area;
         }
+        
         /// <summary>
         ///     The following method calcalculates the perimeter of a circle <see cref = "double"/>
         /// </summary>
         /// <returns> 
-        ///     A <see cref ="double"/> Throws an exception if radius is negative
-        ///     A <see cref ="double"/> returns a doublen value of the calculated area
+        ///     A <see cref ="double"/> returns a double value of the calculated area.
         /// </returns>
         public override double  CalculatePerimeter()
         {
@@ -100,6 +101,12 @@ namespace ShapeCircle
             return perimeter;
         }
 
+        /// <summary>
+        ///     The following method calcalculates the diameter of a circle <see cref = "double"/>
+        /// </summary>
+        /// <returns>
+        /// A <see cref ="double"/> returns a double value of the calculated diameter.
+        /// </returns>
         public double CalculateDiameter()
         {
             double diameter = radius*2;

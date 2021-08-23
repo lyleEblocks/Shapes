@@ -91,6 +91,7 @@ namespace SquareShape
             else
                 return false;
         }
+        
         /// <Inheritdoc>
         public override int GetHashCode()
         {

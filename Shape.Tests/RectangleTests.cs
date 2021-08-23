@@ -62,7 +62,7 @@ namespace Shape.Tests
             double result = rect.CalculateArea();
 
             // Assert
-            Assert.Equal(result, 110);
+            Assert.Equal(110, result);
         }
          [Fact]
         public void Calculate_Area_Of_Rectangle_Unsuccessfully()
@@ -80,9 +80,7 @@ namespace Shape.Tests
         public void Calculate_Area_Of_Rectangle_Exception()
         {
             // Arrange
-            // var int = 0;
             // Act
-            
             // Assert
             Assert.Throws<ArgumentOutOfRangeException>(() =>
             {
@@ -90,5 +88,66 @@ namespace Shape.Tests
             });
             
         }
+          [Fact]
+        public void Calculate_Circumfrance_of_A_Circle_Successfully()
+        {
+            // Arrange
+            Circle circumf = new Circle(3.141, 5);
+            // Act
+            double result = circumf.CalculateCircum(3.141, 5);
+            // Assert
+           Assert.Equal(31.41592653589793, result);
+            
+        }
+         [Fact]
+        public void Calculate_Circumfrance_of_A_Circle_Unsuccessfully()
+        {
+            // Arrange
+            // Arrange
+            // Assert
+            Assert.Throws<ArgumentOutOfRangeException>(()=> 
+            { Circle circumf = new Circle(3.141, -5);});
+        }
+        [Fact]
+        public void Calculate_Area_of_A_Circle_Successfully()
+        {
+            // Arrange
+            Circle area = new Circle(3.141 ,5);
+            // Act
+            double result = area.Calculate_Area_Of_Circle(3.141, 5);
+            // Assert
+            Assert.Equal(78.53981633974483, result);    
+        }
+         [Fact]
+        public void Calculate_Area_of_A_Circle_Unsuccessfully()
+        {
+            // Arrange
+            // Arrange
+            // Assert
+            Assert.Throws<ArgumentOutOfRangeException>(()=> 
+            { Circle area = new Circle(3.141, -5);});
+        }
+         [Fact]
+        public void Calculate_Diameter_of_A_Circle_Successfully()
+        {
+            // Arrange
+            Circle diameter = new Circle(5, 2);
+            // Act
+            double result = diameter.Calculate_Diameter_Of_Circle(5, 2);
+            // Assert
+            Assert.Equal( 10 ,result);
+        }
+          [Fact]
+        public void Calculate_Diameter_of_A_Circle_Unsuccessfully()
+        {
+            // Arrange
+            // Arrange
+            // Assert
+            Assert.Throws<ArgumentOutOfRangeException>(()=> 
+            { Circle diameter = new Circle(2, -5);});
+        }
+        
+        
+
     }
 }

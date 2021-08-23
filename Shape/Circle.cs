@@ -12,7 +12,6 @@
  * prior written
  * permission is obtained from Eblocks Software (Pty) Ltd.
 */
-
 using System;
 
 namespace Shape
@@ -89,7 +88,9 @@ namespace Shape
         /// <summary>
         ///     Calculates the perimeter of the circle with the currently defined radius. Throws an <see cref="OverflowException" /> if the radius too large.
         /// </summary>
-        /// <returns>double perimeter</returns>
+        /// <returns>
+        ///     A <see cref="double" /> representing the calculated perimiter.
+        /// </returns>
         public double CalculatePerimeter()
         {
             double perimeter = Math.PI * 2 * radius;

@@ -92,9 +92,9 @@ namespace Shape
     /// </summary>
     public class Circle
     {
-        private double PI;
+        //private double PI ;
         private double radius;
-        private double two;
+        
         /// <summary>
         ///     Initializes instances of the <see cref="Circle"/> class.
         /// </summary>
@@ -104,13 +104,13 @@ namespace Shape
         /// <param name="radius">
         ///     Circle radius which is any positive value.
         /// </param>
-        public Circle(double PI, double radius)
+        public Circle( double radius)
         {
             if (radius <= 0)
             {
                 throw new ArgumentOutOfRangeException($"{nameof(radius)} cannot be zero or negative");
             }
-            this.PI = Math.PI;
+            //this.PI = Math.PI;
             this.radius = radius;
         }
         /// <summary>
@@ -125,7 +125,7 @@ namespace Shape
         /// <returns> 
         ///      The result of the circle's circumference.
         /// </returns>
-        public double CalculateCircum(double PI, double radius){
+        public double CalculateCircum(){
             double result = 2*Math.PI*radius;
             return result;
         }
@@ -141,12 +141,9 @@ namespace Shape
         /// <returns>
         ///      The result of the circle Area.
         /// </returns>
-        public double Calculate_Area_Of_Circle( double PI, double radius)
+        public double Calculate_Area_Of_Circle( )
         {
-            if(radius <= 0){
-                throw new ArgumentOutOfRangeException("Radius cannot be zero or a negative number.");
-            }
-            double result = Math.PI * Math.Pow( radius, 2);
+            double result = Math.PI * Math.Pow(radius, 2);
             return result;
         }
         /// <summary>
@@ -161,12 +158,9 @@ namespace Shape
         /// <returns>
         ///      The result of the circle diameter.
         /// </returns>
-        public double Calculate_Diameter_Of_Circle( double two ,double radius)
+        public double Calculate_Diameter_Of_Circle( )
         {
-            if(radius <= 0){
-                throw new ArgumentOutOfRangeException("Radius cannot be zero or a negative number.");
-            }
-            double result = radius * two;
+            double result = 2*radius;
             return result;
         }
     }

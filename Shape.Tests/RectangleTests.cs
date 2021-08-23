@@ -117,8 +117,8 @@ namespace Shape.Tests
             {
                Rectangle rectangle = new Rectangle(-11, 10); 
             });
-            
         }
+
         /// <summary>
         ///      Test case, testing to see if calculation of circumfrance is correct and successful.
         /// </summary>
@@ -126,25 +126,40 @@ namespace Shape.Tests
         public void Calculate_Circumfrance_of_A_Circle_Successfully()
         {
             // Arrange
-            Circle circumf = new Circle(3.141, 5);
+            Circle circumf = new Circle(5);
             // Act
-            double result = circumf.CalculateCircum(3.141, 5);
+            double result = circumf.CalculateCircum();
             // Assert
-           Assert.Equal(31.41592653589793, result);
-            
+           Assert.Equal(31.41592653589793, result);  
         }
+
         /// <summary>
-        ///  Test case, testing to see if calculation of circumfrance is incorrect .
+        ///     Test case, testing to see if calculation of circumfrance is incorrect.
         /// </summary>
         [Fact]
-        public void Calculate_Circumfrance_of_A_Circle_Unsuccessfully()
+        public void Calculate_Circumfrance_of_A_Circle_Not_Equal()
+        {
+            // Arrange
+             Circle circumf = new Circle(9);
+            // Act
+            double result = circumf.CalculateCircum();
+            // Assert
+            Assert.NotEqual(31.41592653589793, result);
+        }
+
+        /// <summary>
+        ///     Test case, exception testing of the circle circumference.
+        /// </summary>
+        [Fact]
+        public void Calculate_Circumfrance_of_A_Circle_Exception()
         {
             // Arrange
             // Arrange
             // Assert
-            Assert.Throws<ArgumentOutOfRangeException>(()=> 
-            { Circle circumf = new Circle(3.141, -5);});
+            Assert.Throws<ArgumentOutOfRangeException>(()=>
+            { Circle circumf = new Circle(-5);});
         }
+
         /// <summary>
         ///      Test case, testing to see if calculation of area is correct and successful.
         /// </summary>
@@ -152,24 +167,39 @@ namespace Shape.Tests
         public void Calculate_Area_of_A_Circle_Successfully()
         {
             // Arrange
-            Circle area = new Circle(3.141 ,5);
+            Circle area = new Circle(5);
             // Act
-            double result = area.Calculate_Area_Of_Circle(3.141, 5);
+            double result = area.Calculate_Area_Of_Circle();
             // Assert
             Assert.Equal(78.53981633974483, result);    
         }
         /// <summary>
-        ///      Test case, testing to see if calculation of area is incorrect.
+        ///      Test case, testing to see if calculation of area is correct and successful.
         /// </summary>
         [Fact]
         public void Calculate_Area_of_A_Circle_Unsuccessfully()
         {
             // Arrange
+            Circle area = new Circle(7);
+            // Act
+            double result = area.Calculate_Area_Of_Circle();
+            // Assert
+            Assert.NotEqual(78.53981633974483, result);    
+        }
+
+        /// <summary>
+        ///      Test case, testing to see if calculation of area is incorrect.
+        /// </summary>
+        [Fact]
+        public void Calculate_Area_of_A_Circle_Exception()
+        {
+            // Arrange
             // Arrange
             // Assert
             Assert.Throws<ArgumentOutOfRangeException>(()=> 
-            { Circle area = new Circle(3.141, -5);});
+            { Circle area = new Circle(-5);});
         }
+        
         /// <summary>
         ///      Test case, testing to see if calculation of diameter is correct and successful.
         /// </summary>
@@ -177,9 +207,9 @@ namespace Shape.Tests
         public void Calculate_Diameter_of_A_Circle_Successfully()
         {
             // Arrange
-            Circle diameter = new Circle(5, 2);
+            Circle diameter = new Circle(5);
             // Act
-            double result = diameter.Calculate_Diameter_Of_Circle(5, 2);
+            double result = diameter.Calculate_Diameter_Of_Circle();
             // Assert
             Assert.Equal( 10 ,result);
         }
@@ -193,7 +223,7 @@ namespace Shape.Tests
             // Arrange
             // Assert
             Assert.Throws<ArgumentOutOfRangeException>(()=> 
-            { Circle diameter = new Circle(2, -5);});
+            { Circle diameter = new Circle(-5);});
         }
         /// <summary>
         ///      Test case, testing to see if calculation of area is correct and successful.
@@ -204,7 +234,7 @@ namespace Shape.Tests
             // Arrange
              Square area = new Square(4);
             // Arrange
-            double result = area.Calculate_Area_of_A_Square(4);
+            double result = area.Calculate_Area_of_A_Square();
             // Assert
             Assert.Equal(16, result);
         }
@@ -217,7 +247,7 @@ namespace Shape.Tests
             // Arrange
              Square area1 = new Square(0);
             // Arrange
-            double result = area1.Calculate_Area_of_A_Square(0);
+            double result = area1.Calculate_Area_of_A_Square();
             // Assert
             Assert.NotEqual(16, result);
         }
@@ -230,7 +260,7 @@ namespace Shape.Tests
             // Arrange
              Square perimeter = new Square(8);
             // Arrange
-            double result = perimeter.Calculate_Perimeter_of_A_Square(8);
+            double result = perimeter.Calculate_Perimeter_of_A_Square();
             // Assert
             Assert.Equal(32, result);
         }
@@ -243,7 +273,7 @@ namespace Shape.Tests
             // Arrange
              Square perimeter = new Square(0);
             // Arrange
-            double result = perimeter.Calculate_Perimeter_of_A_Square(0);
+            double result = perimeter.Calculate_Perimeter_of_A_Square();
             // Assert
             Assert.NotEqual(32, result);
         }
@@ -256,7 +286,7 @@ namespace Shape.Tests
             // Arrange
              Square diagonal = new Square(6);
             // Arrange
-            double result = diagonal.Calculate_Diagonal_of_A_Square(6);
+            double result = diagonal.Calculate_Diagonal_of_A_Square();
             // Assert
             Assert.Equal(72, result);
         }
@@ -269,7 +299,7 @@ namespace Shape.Tests
             // Arrange
              Square diagonal = new Square(0);
             // Arrange
-            double result = diagonal.Calculate_Diagonal_of_A_Square(0);
+            double result = diagonal.Calculate_Diagonal_of_A_Square();
             // Assert
             Assert.NotEqual(72, result);
         }

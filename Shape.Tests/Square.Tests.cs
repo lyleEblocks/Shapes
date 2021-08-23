@@ -71,13 +71,13 @@ namespace SquareTests
             Square sq = new Square(10);
 
             // Act
-            double result = sq.CalculateAreaOfaSquare();
+            double result = sq.CalculateArea();
 
             // Assert
             Assert.True(result == 100);
         }
         /// <summary>
-        ///     This confirms the negative scenario of the CalculateAreaOfaSquare method
+        ///     This confirms the negative scenario of the CalculateArea method
         /// </summary>
 
         [Fact]
@@ -87,13 +87,13 @@ namespace SquareTests
             Square sq = new Square(10);
 
             // Act
-            double result = sq.CalculateAreaOfaSquare();
+            double result = sq.CalculateArea();
 
             // Assert
             Assert.False(result == 10);
         }
         /// <summary>
-        ///     This method confirms the positive scenario of th CalculatePerimeterOfaSquare mewthod
+        ///     This method confirms the positive scenario of th CalculatePerimeter mewthod
         /// </summary>
 
         [Fact]
@@ -103,13 +103,13 @@ namespace SquareTests
             Square sq = new Square(10);
 
             // Act
-            double result = sq.CalculatePerimeterOfaSquare();
+            double result = sq.CalculatePerimeter();
 
             // Assert
             Assert.True(result == 40);
         }
         /// <summary>
-        ///     THis methods checks the negative scenario condition for the CalculatePerimeterOfaSquare method
+        ///     THis methods checks the negative scenario condition for the CalculatePerimeter method
         /// </summary>
 
         [Fact]
@@ -119,7 +119,7 @@ namespace SquareTests
             Square sq = new Square(10);
 
             // Act
-            double result = sq.CalculatePerimeterOfaSquare();
+            double result = sq.CalculatePerimeter();
 
             // Assert
             Assert.False(result == 30);
@@ -131,9 +131,6 @@ namespace SquareTests
         [Fact]
         public void Catch_Exception_Of_Square_Successfully()
         {
-            // Arrange
-
-            // Act
             
             // Assert
             Assert.Throws<ArgumentOutOfRangeException>(() =>

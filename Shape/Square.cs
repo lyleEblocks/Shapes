@@ -13,19 +13,12 @@
  * permission is obtained from Eblocks Software (Pty) Ltd.
 */
 using System;
+using CalculationsSpace;
 
 
 namespace SquareShape
 {
-    /// <summary>
-    ///     This class provides the definition for the methods in the Square class
-    /// </summary>
-    public abstract class Calculations
-    {
-        abstract public double CalculateAreaOfaSquare();
-
-        abstract public double CalculatePerimeterOfaSquare();
-    }
+    
     /// <summary>
     ///     This class inherits from the abstract class calculation and provides the implemnation for its methods along with the propoerties it makes use of
     /// </summary>
@@ -54,7 +47,7 @@ namespace SquareShape
         /// <returns>
         ///     A <see cref = "double" /> returns the calculated area if a positive side value was supplied
         /// </returns>
-        public override double CalculateAreaOfaSquare()
+        public override double CalculateArea()
         {
             if (side <= 0) 
             {
@@ -71,7 +64,7 @@ namespace SquareShape
         /// <returns>
         ///     A <see cref = "double" /> returns the calculated Perimeter if a positive side value was supplied
         /// </returns>
-        public override double  CalculatePerimeterOfaSquare()
+        public override double  CalculatePerimeter()
         {
             if (side <= 0) 
             {
@@ -98,7 +91,7 @@ namespace SquareShape
             else
                 return false;
         }
-
+        /// <Inheritdoc>
         public override int GetHashCode()
         {
             return base.GetHashCode();

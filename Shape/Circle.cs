@@ -14,6 +14,7 @@
 */
 
 using System;
+using CalculationsSpace;
 
 namespace ShapeCircle
 {   
@@ -22,11 +23,10 @@ namespace ShapeCircle
     ///     <see cref = "double" radius/>
     ///     <see cref = "const double" PIE/>
     /// </summary>
-    public class Circle
+    public class Circle : Calculations
     {
         private double radius;
-        private const double PIE = 3.14;
-
+        
 
         /// <summary>
         ///     This constructor defines the properties of circle using the radius.
@@ -70,14 +70,14 @@ namespace ShapeCircle
         ///     A <see cref ="double"/> Throws an exception if radius is negative
         ///     A <see cref ="double"/> returns a doublen value of the calculated area
         /// </returns>
-        public double CalculateTheAreaOfACircle()
+        public override double CalculateArea()
         {
             
             if (radius <= 0) 
             {
                 throw new ArgumentOutOfRangeException($"{nameof(radius)} cannot be 0 or negative");
             }
-            double area = radius*radius*PIE;
+            double area = Math.Pow(radius, 2.0)*Math.PI;
 
             return area;
         }
@@ -88,16 +88,23 @@ namespace ShapeCircle
         ///     A <see cref ="double"/> Throws an exception if radius is negative
         ///     A <see cref ="double"/> returns a doublen value of the calculated area
         /// </returns>
-        public double CalculateThePerimeterOfACircle()
+        public override double  CalculatePerimeter()
         {
              if (radius <= 0) 
             {
                 throw new ArgumentOutOfRangeException($"{nameof(radius)} cannot be 0 or negative");
             }
            
-            double perimeter = radius*2*PIE;
+            double perimeter = radius*2*Math.PI;
             
             return perimeter;
+        }
+
+        public double CalculateDiameter()
+        {
+            double diameter = radius*2;
+
+            return diameter;
         }
 
     }

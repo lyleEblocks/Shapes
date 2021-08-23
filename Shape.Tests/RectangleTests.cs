@@ -52,10 +52,7 @@ namespace RectangleTests
         [Fact]
         public void Should_Ensure_Rectangle_Has_Valid_Parameters()
         {
-            //  Arrange
 
-            //  Act
-            
             //  Assert
             Assert.Throws<ArgumentOutOfRangeException>(() =>
             { 
@@ -78,7 +75,7 @@ namespace RectangleTests
             // Assert
             Assert.True(result == 110);
         }
-        
+
         /// <summary>
         ///     This method checks the negative scenario for the CalculateArea method
         /// </summary>
@@ -101,9 +98,6 @@ namespace RectangleTests
         [Fact]
         public void Calculate_Area_Of_Rectangle_Exception()
         {
-            // Arrange
-
-            // Act
             
             // Assert
             Assert.Throws<ArgumentOutOfRangeException>(() =>
@@ -150,10 +144,7 @@ namespace RectangleTests
          [Fact]
         public void Calculate_Perimeter_Of_Rectangle_Exception()
         {
-            // Arrange
 
-            // Act
-            
             // Assert
             Assert.Throws<ArgumentOutOfRangeException>(() =>
             {

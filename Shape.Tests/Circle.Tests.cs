@@ -27,10 +27,10 @@ namespace CircleTests
             Assert.True(result);
 
         }
+
         /// <summary>
         ///     This method checks if two circles with different radii are not equal
         /// </summary>
-
         [Fact]
         public void Sould_Ensure_two_Circles_Are_Not_Equal()
         {
@@ -44,6 +44,7 @@ namespace CircleTests
             //Assert
             Assert.False(result);
         }
+
         /// <summary>
         ///     This method checks if the Radius is not negative
         /// </summary>
@@ -60,6 +61,7 @@ namespace CircleTests
                 Circle circleA = new Circle(-11);
             });          
         }
+
         /// <summary>
         ///     This method confirms if the CalculateTheAreaOfACirCle method works correclly 
         /// </summary>
@@ -68,18 +70,18 @@ namespace CircleTests
         {
             //Arrange
             Circle circleA = new Circle(10);
-            const double trueArea = 100*3.14;
+            const double trueArea = 100*Math.PI;
 
             //Act
-            double testedArea = circleA.CalculateTheAreaOfACircle();
+            double testedArea = circleA.CalculateArea();
 
             //Assert
             Assert.True(trueArea == testedArea);
         }
+
         /// <summary>
         ///     This method tests the negative scenario of the CalculateTheAreaOfACirCle method
         /// </summary>
-
         [Fact]
         public void Calculate_The_Area_Of_A_Circle_Unsuccessfully()
         {
@@ -88,15 +90,15 @@ namespace CircleTests
             const double trueArea = 2*100*3.14;
 
             //Act
-            double testedArea = circleA.CalculateTheAreaOfACircle();
+            double testedArea = circleA.CalculateArea();
 
             //Assert
             Assert.False(trueArea == testedArea);
         }
+
         /// <summary>
         ///     This method tests the equality of the area of two circles with equal Radii
         /// </summary>
-
         [Fact]
         public void Calculate_The_Area_Of_A_CircleA_Is_Equal_To_Area_Of_CircleB_Successfully()
         {
@@ -105,17 +107,17 @@ namespace CircleTests
             Circle circleB = new Circle(10);
 
             //Act
-            double testedAreaA = circleA.CalculateTheAreaOfACircle();
-            double testedAreaB = circleB.CalculateTheAreaOfACircle();
+            double testedAreaA = circleA.CalculateArea();
+            double testedAreaB = circleB.CalculateArea();
             bool result = testedAreaA.Equals(testedAreaB);
 
             //Assert
             Assert.True(result);
         }
-        /// <summary>
-        ///      This method confirms that two circles of different radii have non equal area
-        /// </summary>
 
+        /// <summary>
+        ///      This method confirms that two circles of different radii have a non equal area sucessfully.
+        /// </summary>
         [Fact]
         public void Calculate_The_Area_Of_A_CircleA_Is_Not_Equal_To_Area_Of_CircleB_Successfully()
         {
@@ -124,23 +126,20 @@ namespace CircleTests
             Circle circleB = new Circle(101);
 
             //Act
-            double testedAreaA = circleA.CalculateTheAreaOfACircle();
-            double testedAreaB = circleB.CalculateTheAreaOfACircle();
+            double testedAreaA = circleA.CalculateArea();
+            double testedAreaB = circleB.CalculateArea();
             bool result = testedAreaA.Equals(testedAreaB);
 
             //Assert
             Assert.False(result);
         }
-        /// <summary>
-        ///     This method tests for negative radius which throws an exception if a circle has a negative radus
-        /// </summary>
 
+        /// <summary>
+        ///     This method tests for negative radius which throws an exception if a circle has a negative radius.
+        /// </summary>
         [Fact]
         public void Should_Ensure_Circle_Has_Non_Valid_Radius_For_Area()
         {
-            //  Arrange
-
-            //  Act
 
             //  Assert
             Assert.Throws<ArgumentOutOfRangeException>(() =>
@@ -148,50 +147,47 @@ namespace CircleTests
                 Circle circleA = new Circle(-11);
             });          
         }
-        /// <summary>
-        ///     This method confirms if the CalculateThePerimeterOfACircle methjod is working correctly
-        /// </summary>
 
+        /// <summary>
+        ///     This method confirms if the CalculateThePerimeterOfACircle methjod is working correctly.
+        /// </summary>
         [Fact]
         public void Calculate_The_Perimeter_Of_A_Circle_Successfully()
         {
             //Arrange
             Circle circleA = new Circle(10);
-            const double truePerimeter = 2*10*3.14;
+            const double truePerimeter = 2*10*Math.PI;
 
             //Act
-            double calculatedPerimeter = circleA.CalculateThePerimeterOfACircle();
+            double calculatedPerimeter = circleA.CalculatePerimeter();
 
             //Assert
             Assert.True(truePerimeter == calculatedPerimeter);
         }
-        /// <summary>
-        ///     This method tests the negative scenario of the CalculateThePerimeterOfACircle method 
-        /// </summary>
 
+        /// <summary>
+        ///     This method tests the negative scenario of the CalculateThePerimeterOfACircle method. 
+        /// </summary>
         [Fact]
         public void Calculate_The_Perimeter_Of_A_Circle_Unsuccessfully()
         {
             //Arrange
             Circle circleA = new Circle(11);
-            const double truePerimeter = 2*10*3.14;
+            const double truePerimeter = 2*10*Math.PI;
 
             //Act
-            double calculatedPerimeter = circleA.CalculateThePerimeterOfACircle();
+            double calculatedPerimeter = circleA.CalculatePerimeter();
 
             //Assert
             Assert.False(truePerimeter == calculatedPerimeter);
         }
+
         /// <summary>
         ///     This method checks the correct format for the radius for the CalculateThePerimeterOfACircle method.
         /// </summary>
-
         [Fact]
         public void Should_Ensure_Circle_Has_Non_Valid_Radius_For_Perimeter()
         {
-            //  Arrange
-
-            //  Act
 
             //  Assert
             Assert.Throws<ArgumentOutOfRangeException>(() =>
@@ -200,6 +196,41 @@ namespace CircleTests
             }); 
           
         }
+
+        /// <summary>
+        ///     This method checks that the diameter of a circle has been calculated successfully.
+        /// </summary>
+        [Fact]
+        public void Calculate_The_Diameter_Of_A_Circle_Successfully()
+        {
+            //Arrange
+            Circle circleA = new Circle(10);
+            const double trueDiameter = 20;
+
+            //Act
+            double calculatedDiameter = circleA.CalculateDiameter();
+            //Assert
+
+            Assert.True(trueDiameter == calculatedDiameter);
+        }
+
+        /// <summary>
+        ///     This method checks that the diameter of a circle has been calculated unsuccessfully.
+        /// </summary>
+        [Fact]
+        public void Calculate_The_Diameter_Of_A_Circle_Unsuccessfully()
+        {
+            //Arrange
+            Circle circleA = new Circle(10);
+            const double trueDiameter = 30;
+
+            //Act
+            double calculatedDiameter = circleA.CalculateDiameter();
+            //Assert
+
+            Assert.False(trueDiameter == calculatedDiameter);
+        }
+
 
     }
 }

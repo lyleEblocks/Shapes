@@ -70,7 +70,7 @@ namespace Shape
         }
         
         /// <summary>
-        ///     This method will calculate the circumfrance of the circle and return the calculated value.
+        ///     This method will calculate the circumference of the circle and return the calculated value.
         /// </summary>
         /// <returns>Returns <see cref="double"/> that represents the calculated value of the circumference.</returns>
         public double CalculateCircumference()
@@ -79,7 +79,7 @@ namespace Shape
         }
         
         /// <summary>
-        ///     This method will calculate the diameter of the of the circle and return the calculated value.
+        ///     This method will calculate the diameter of the circle and return the calculated value.
         /// </summary>
         /// <returns>Returns <see cref="int"/> that represents the value of the diameter of the circle.</returns>
         public int CalculateDiameter()

@@ -4,7 +4,7 @@ using Xunit;
 namespace Shape 
 {
     /// <summary>
-    /// This class will test our Circle class
+    /// This class will test the methods in our Circle class.
     /// </summary>
     public class CircleTests
     {
@@ -73,7 +73,7 @@ namespace Shape
             double area = circleA.CalculateArea();
             
             //Assert
-            Assert.Equal(area, expected);
+            Assert.Equal(expected, area);
         } 
 
         /// <summary>
@@ -90,7 +90,7 @@ namespace Shape
             double result = circleB.CalculateCircumference();
 
             //Assert
-            Assert.Equal(result, expected);       
+            Assert.Equal(expected, result);       
         }
 
         /// <summary>
@@ -107,7 +107,7 @@ namespace Shape
             int result = circleC.CalculateDiameter();
 
             //Assert
-            Assert.Equal(result, expected);
+            Assert.Equal(expected, result);
         }
     }
 }

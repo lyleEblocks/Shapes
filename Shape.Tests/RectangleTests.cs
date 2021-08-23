@@ -24,45 +24,37 @@ namespace Shape.Tests
     public class RectangleTests
     {   
         /// <summary>
-        ///     Test case ,testing if two rectangels are equal.
+        ///     Test case <see cref="Should_Ensure_The_Two_Rectangles_Are_Equal"/> ,testing if two rectangels are equal.
         /// </summary>
         [Fact]
         public void Should_Ensure_The_Two_Rectangles_Are_Equal()
         {
             //  Arrange
             Rectangle rectangleA = new Rectangle(10, 20);
-          
             Rectangle rectangleB = new Rectangle(10,20);
-        
-
             //  Act
             bool result = rectangleA.Equals(rectangleB);
-
             //  Assert
             Assert.True(result);
         }
+
          /// <summary>
-        ///     Test case ,testing if two rectangels are not equal.
+        ///     Test case<see cref="Should_Ensure_The_Two_Rectangles_Are_NotEqual"/> ,testing if two rectangels are not equal.
         /// </summary>  
         [Fact]
         public void Should_Ensure_The_Two_Rectangles_Are_NotEqual()
         {
             //  Arrange
             Rectangle rectangleA = new Rectangle(11, 20);
-        
-
             Rectangle rectangleB = new Rectangle(10,20);
-        
-
             //  Act
             bool result = rectangleA.Equals(rectangleB);
-
             //  Assert
             Assert.False(result);
-        
         }
+
         /// <summary>
-        ///     Test case ,testing to see if expection is thrown upon negative number entry.
+        ///     Test case<see cref="Should_Ensure_Rectangle_Has_Valid_Parameters"/> ,testing to see if expection is thrown upon negative number entry.
         /// </summary>
         [Fact]
         public void Should_Ensure_Rectangle_Has_Valid_Parameters()
@@ -75,38 +67,37 @@ namespace Shape.Tests
                 Rectangle rectangleA = new Rectangle(-11, 20);
             });          
         }
+
         /// <summary>
-        ///     Test case ,testing if area of rectangle is calculated Successfully.
+        ///     Test case<see cref="Calculate_Area_Of_Rectangle_Successfully"/> ,testing if area of rectangle is calculated Successfully.
         /// </summary>
         [Fact]
         public void Calculate_Area_Of_Rectangle_Successfully()
         {
             // Arrange
             Rectangle rect = new Rectangle(10,11);
-
             // Act
             double result = rect.CalculateArea();
-
             // Assert
             Assert.Equal(110, result);
         }
+
         /// <summary>
-        ///     Test case ,testing if area of rectangle is calculated incorrectly.
+        ///     Test case<see cref=" Calculate_Area_Of_Rectangle_Unsuccessfully"/>,testing if area of rectangle is calculated incorrectly.
         /// </summary>
         [Fact]
         public void Calculate_Area_Of_Rectangle_Unsuccessfully()
         {
             // Arrange
             Rectangle rect = new Rectangle(10,11);
-
             // Act
             double result = rect.CalculateArea();
-
             // Assert
             Assert.NotEqual(100, 110);
         }
+
         /// <summary>
-        ///      Test case, testing to see if expection is throw upon negative number entry.
+        ///      Test case<see cref="Calculate_Area_Of_Rectangle_Exception"/>, testing to see if expection is throw upon negative number entry.
         /// </summary>
         [Fact]
         public void Calculate_Area_Of_Rectangle_Exception()
@@ -118,10 +109,10 @@ namespace Shape.Tests
             {
                Rectangle rectangle = new Rectangle(-11, 10); 
             });
-            
         }
+
         /// <summary>
-        ///      Test case, testing to see if calculation of circumfrance is correct and successful.
+        ///      Test case<see cref="Calculate_Circumfrance_of_A_Circle_Successfully"/>, testing to see if calculation of circumfrance is correct and successful.
         /// </summary>
         [Fact]
         public void Calculate_Circumfrance_of_A_Circle_Successfully()
@@ -132,10 +123,10 @@ namespace Shape.Tests
             double result = circumf.CalculateCircum();
             // Assert
            Assert.Equal(31.41592653589793, result);
-            
         }
+
         /// <summary>
-        ///  Test case, testing to see if calculation of circumfrance is incorrect .
+        ///      Test case<see cref="Calculate_Circumfrance_of_A_Circle_Unsuccessfully"/>, testing to see if calculation of circumfrance is incorrect .
         /// </summary>
         [Fact]
         public void Calculate_Circumfrance_of_A_Circle_Unsuccessfully()
@@ -146,8 +137,9 @@ namespace Shape.Tests
             Assert.Throws<ArgumentOutOfRangeException>(()=> 
             { Circle circumf = new Circle(-5);});
         }
+
         /// <summary>
-        ///      Test case, testing to see if calculation of area is correct and successful.
+        ///      Test case<see cref="Calculate_Area_of_A_Circle_Successfully"/>, testing to see if calculation of area is correct and successful.
         /// </summary>
         [Fact]
         public void Calculate_Area_of_A_Circle_Successfully()
@@ -159,8 +151,9 @@ namespace Shape.Tests
             // Assert
             Assert.Equal(78.53981633974483, result);    
         }
+
         /// <summary>
-        ///      Test case, testing to see if calculation of area is incorrect.
+        ///      Test case<see cref="Calculate_Area_of_A_Circle_Unsuccessfully"/>, testing to see if calculation of area is incorrect.
         /// </summary>
         [Fact]
         public void Calculate_Area_of_A_Circle_Unsuccessfully()
@@ -171,8 +164,9 @@ namespace Shape.Tests
             Assert.Throws<ArgumentOutOfRangeException>(()=> 
             { Circle area = new Circle(-5);});
         }
+
         /// <summary>
-        ///      Test case, testing to see if calculation of diameter is correct and successful.
+        ///      Test case<see cref="Calculate_Diameter_of_A_Circle_Successfully"/>, testing to see if calculation of diameter is correct and successful.
         /// </summary>
         [Fact]
         public void Calculate_Diameter_of_A_Circle_Successfully()
@@ -184,8 +178,9 @@ namespace Shape.Tests
             // Assert
             Assert.Equal( 10 ,result);
         }
+        
         /// <summary>
-        ///      Test case, testing to see if calculation of diameter is incorrect.
+        ///      Test case<see cref="Calculate_Diameter_of_A_Circle_Unsuccessfully"/>, testing to see if calculation of diameter is incorrect.
         /// </summary>
         [Fact]
         public void Calculate_Diameter_of_A_Circle_Unsuccessfully()
@@ -196,8 +191,9 @@ namespace Shape.Tests
             Assert.Throws<ArgumentOutOfRangeException>(()=> 
             { Circle diameter = new Circle(-5);});
         }
+
         /// <summary>
-        ///      Test case, testing to see if calculation of area is correct and successful.
+        ///      Test case<see cref="Calculate_Area_of_A_Square_Successfully"/>, testing to see if calculation of area is correct and successful.
         /// </summary>
         [Fact]
         public void Calculate_Area_of_A_Square_Successfully()
@@ -209,8 +205,9 @@ namespace Shape.Tests
             // Assert
             Assert.Equal(16, result);
         }
+
         /// <summary>
-        ///      Test case, testing to see if calculation of area is incorrect.
+        ///      Test case<see cref="Calculate_Area_of_A_Square_Usuccessfully"/>, testing to see if calculation of area is incorrect.
         /// </summary>
         [Fact]
         public void Calculate_Area_of_A_Square_Usuccessfully()
@@ -222,8 +219,9 @@ namespace Shape.Tests
             // Assert
             Assert.NotEqual(16, result);
         }
+
         /// <summary>
-        ///      Test case, testing to see if calculation of parameter is correct and successful.
+        ///      Test case<see cref="Calculate_Perimeter_of_A_Square_Successfully"/>, testing to see if calculation of parameter is correct and successful.
         /// </summary>
         [Fact]
         public void Calculate_Perimeter_of_A_Square_Successfully()
@@ -235,8 +233,9 @@ namespace Shape.Tests
             // Assert
             Assert.Equal(32, result);
         }
+
         /// <summary>
-        ///      Test case, testing to see if calculation of parameter is incorrect .
+        ///      Test case<see cref="Calculate_Perimeter_of_A_Square_Usuccessfully"/>, testing to see if calculation of parameter is incorrect .
         /// </summary>
         [Fact]
         public void Calculate_Perimeter_of_A_Square_Usuccessfully()
@@ -248,8 +247,9 @@ namespace Shape.Tests
             // Assert
             Assert.NotEqual(32, result);
         }
+
         /// <summary>
-        ///     Test case, testing to see if Calculation of diagonal is correct and successful.
+        ///     Test case<see cref="Calculate_Diagonal_of_A_Square_Successfully"/>, testing to see if Calculation of diagonal is correct and successful.
         /// </summary>
         [Fact]
         public void Calculate_Diagonal_of_A_Square_Successfully()
@@ -261,8 +261,9 @@ namespace Shape.Tests
             // Assert
             Assert.Equal(72, result);
         }
+
         /// <summary>
-        ///     Test case, testing to see if Calculation of diagonal is incorrect.
+        ///     Test case<see cref="Calculate_Diagonal_of_A_Square_Usuccessfully"/>, testing to see if Calculation of diagonal is incorrect.
         /// </summary>
         [Fact]
         public void Calculate_Diagonal_of_A_Square_Usuccessfully()

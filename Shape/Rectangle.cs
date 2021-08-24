@@ -96,9 +96,7 @@ namespace Shape
         /// <summary>
         ///     Initializes instances of the <see cref="Circle"/> class.
         /// </summary>
-        /// <param name="PI">
-        ///     Cirlce PI which is 3.141.
-        /// </param>
+
         /// <param name="radius">
         ///     Circle radius which is any positive value.
         /// </param>
@@ -154,9 +152,6 @@ namespace Shape
     ///      A <see cref="Square"/> class that calculates square formulas.
     /// </summary>
     public class Square{
-        private double area;
-         private double perimeter;
-         private double diagonal;
         /// <summary>
         ///      Initializes instances of the <see cref="Square"/> class.
         /// </summary>
@@ -165,14 +160,11 @@ namespace Shape
         /// </param>
         public Square(double area)
         {
-            this.area = area;
+
         }
         /// <summary>
         ///     <see cref="Calculate_Area_of_A_Square"/> method calculates the area of a square.
         /// </summary>
-        /// <param name="area">
-        ///     The area of a square.
-        /// </param>
         /// <returns>
         ///    The result of the square area.
         /// </returns>
@@ -184,9 +176,6 @@ namespace Shape
         /// <summary>
         ///     <see cref="Calculate_Perimeter_of_A_Square"/> method calculates the perimeter of a square.
         /// </summary>
-        /// <param name="perimeter">
-        ///     The perimeter of a square.
-        /// </param>
         /// <returns>
         ///    The result of the square perimeter.
         /// </returns>
@@ -198,9 +187,6 @@ namespace Shape
         /// <summary>
         ///     <see cref="Calculate_Diagonal_of_A_Square"/> method calculates the diagonal of a square.
         /// </summary>
-        /// <param name="diagonal">
-        ///     The diagonal of a square.
-        /// </param>
         /// <returns>
         ///    The result of the square diagonal.
         /// </returns>
